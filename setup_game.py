@@ -26,9 +26,31 @@ def set_number_of_players():
     # Set how many players will play.
     numberOfPlayers = numP
 
+def randomize_sets():
+    def randomize_all():
+        pass
+    def randomize_expansions():
+        pass
+    def randomize_premiums():
+        pass
+    def randomize_masters():
+        pass
+
+    # Randomize Setup
+    randomizeMenu = Menu(mainMenu)
+    randomizeMenu.options.append(randomize_all)
+    randomizeMenu.options.append(randomize_expansions)
+    randomizeMenu.options.append(randomize_premiums)
+    randomizeMenu.options.append(randomize_masters)
+
+    # Run the menu.
+    while (randomizeMenu):
+        randomizeMenu.getMenu()
+
 # Menu Setup
 mainMenu = Menu()
 mainMenu.options.append(set_number_of_players)
+mainMenu.options.append(randomize_sets)
 
 # Run the menu.
 while (mainMenu):
